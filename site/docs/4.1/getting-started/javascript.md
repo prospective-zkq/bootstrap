@@ -34,11 +34,10 @@ Alternatively, to target a specific plugin, just include the plugin's name as a 
 $(document).off('.alert.data-api')
 {% endhighlight %}
 
-{% capture callout %}
-##### Escaping selectors
-If you use special selectors, for example: `collapse:Example`, be sure to escape them, because they'll be passed through jQuery.
-{% endcapture %}
-{% include callout.html content=callout type="warning" %}
+## Selectors
+
+Currently to queried DOM elements we use native methods (for performance reasons) `querySelector` and `querySelectorAll`, so you have to use [valid selectors](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier).
+If you use special selectors, for example: `collapse:Example`, be sure to escape them.
 
 ## Events
 
